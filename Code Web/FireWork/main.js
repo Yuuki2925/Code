@@ -4,6 +4,12 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+if (isMobile) {
+    canvas.style.width = '100%';
+    canvas.style.height = '100vh';
+}
+
 // Khởi tạo mảng chứa các âm thanh
 const launchSounds = [
   document.getElementById('launch1'),
@@ -52,6 +58,7 @@ class Firework {
     this.sy = Math.random() * -3 - 3;
     this.size = Math.random() * 2 + 1;
     this.shouldExplode = false;
+    this.particleCount = isMobile ? 30 : 50;
 
     const colorVal = Math.round(0xffffff * Math.random());
     const r = colorVal >> 16;
@@ -119,7 +126,7 @@ function animate() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  if (Math.random() < 0.05) {
+  if (Math.random() < (isMobile ? 0.03 : 0.05)) {
     fireworks.push(new Firework());
   }
 
@@ -169,6 +176,13 @@ class TextDisplay {
       '#ffb3b3'  // light red-white
     ];
     this.container = document.getElementById('textContainer');
+    
+    if (isMobile) {
+      this.container.style.fontSize = '0.9em';
+      this.container.style.padding = '10px';
+      this.container.style.width = '90%';
+      this.container.style.left = '5%';
+    }
   }
 
   display() {

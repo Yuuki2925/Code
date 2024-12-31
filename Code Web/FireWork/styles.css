@@ -56,6 +56,18 @@ body {
         padding: 15px;
         width: 85%;
     }
+
+    .text-container {
+        bottom: 20%;
+    }
+    
+    .text-line {
+        margin-bottom: 10px;
+    }
+    
+    .text {
+        letter-spacing: 1px;
+    }
 }
 
 @media (max-width: 480px) {
