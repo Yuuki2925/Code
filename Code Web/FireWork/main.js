@@ -166,7 +166,7 @@ animate();
 class TextDisplay {
   constructor() {
     this.lines = [
-      "Chúc em     năm mới     vui vẻ    nha      cục bông!!"
+      "Chúc em     năm mới     vui vẻ   nha    cục bông!!"
     ];
     this.colors = [
       '#fff5b3', // light yellow-white
