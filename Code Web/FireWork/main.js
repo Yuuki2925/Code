@@ -181,7 +181,10 @@ class TextDisplay {
       this.container.style.fontSize = '0.9em';
       this.container.style.padding = '10px';
       this.container.style.width = '90%';
-      this.container.style.left = '5%';
+      this.container.style.left = '50%';
+      this.container.style.transform = 'translateX(-50%)';
+      this.container.style.textAlign = 'center';
+      this.container.style.bottom = '30%';
     }
   }
 
