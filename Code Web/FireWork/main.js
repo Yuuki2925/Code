@@ -166,9 +166,7 @@ animate();
 class TextDisplay {
   constructor() {
     this.lines = [
-      "Chúc em năm mớiiiii 2025 zui zẻ mạnh khỏe và nuôn xinh đẹp,",
-      "trưởng thành hơn, yêu a hơn và cute hơn nữa.",
-      "Cảm ơn đã bên cạnh anh 3 năm pháo hoa nổ nhaaa!!!"
+      "Chúc em năm mới vui vẻ nha cục bông!!"
     ];
     this.colors = [
       '#fff5b3', // light yellow-white
